@@ -295,9 +295,9 @@ const Footer = () => {
           © 2025 ZNS NEXUS. All rights reserved.
         </p>
         <div className="footer-links" data-testid="footer-links">
-          <a href="#" data-testid="privacy-link">Privacy Policy</a>
+          <a href="/privacy" data-testid="privacy-link">Privacy Policy</a>
           <span className="separator">|</span>
-          <a href="#" data-testid="terms-link">Terms of Service</a>
+          <a href="/terms" data-testid="terms-link">Terms of Service</a>
         </div>
       </div>
     </footer>
