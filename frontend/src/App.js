@@ -172,16 +172,11 @@ const WorkWithUsForm = () => {
       `Message:\n${formData.message}`
     );
 
-    // Construct mailto link - ensure email address is properly formatted
+    // Construct mailto link with proper formatting
     const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
 
-    // Create a temporary anchor element to ensure proper mailto handling
-    const link = document.createElement('a');
-    link.href = mailtoLink;
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    // Use window.location.href to open email client (most reliable method)
+    window.location.href = mailtoLink;
 
     // Show success message
     setShowSuccess(true);
