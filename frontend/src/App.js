@@ -163,6 +163,7 @@ const WorkWithUsForm = () => {
     e.preventDefault();
 
     // Create mailto link with pre-filled information
+    const emailAddress = 'ZNS.Nexus.main@pm.me';
     const subject = encodeURIComponent(`ZNS NEXUS Team Application - ${formData.role}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\n` +
@@ -171,10 +172,16 @@ const WorkWithUsForm = () => {
       `Message:\n${formData.message}`
     );
 
-    const mailtoLink = `mailto:ZNS.Nexus.main@pm.me?subject=${subject}&body=${body}`;
+    // Construct mailto link - ensure email address is properly formatted
+    const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
 
-    // Open email client
-    window.location.href = mailtoLink;
+    // Create a temporary anchor element to ensure proper mailto handling
+    const link = document.createElement('a');
+    link.href = mailtoLink;
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
 
     // Show success message
     setShowSuccess(true);
