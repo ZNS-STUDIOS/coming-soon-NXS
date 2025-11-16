@@ -1,7 +1,7 @@
 /* Global Styles */
 .App {
   min-height: 100vh;
-  background: #212121;
+  background: #0a0a0a;
   color: #F2EFDE;
   position: relative;
 }
@@ -11,7 +11,7 @@
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(33, 33, 33, 0.8);
+  background: rgba(10, 10, 10, 0.8);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(242, 239, 222, 0.1);
   padding: 1.5rem 0;
@@ -147,7 +147,7 @@
 /* Work With Us Section */
 .work-with-us-section {
   padding: 8rem 2rem;
-  background: linear-gradient(180deg, #212121 0%, rgba(33, 33, 33, 0.95) 100%);
+  background: linear-gradient(180deg, #0a0a0a 0%, rgba(10, 10, 10, 0.95) 100%);
   position: relative;
 }
 
@@ -319,7 +319,7 @@
 .footer {
   padding: 3rem 2rem;
   border-top: 1px solid rgba(242, 239, 222, 0.1);
-  background: rgba(33, 33, 33, 0.95);
+  background: rgba(10, 10, 10, 0.95);
 }
 
 .footer-content {
@@ -362,21 +362,39 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header {
+    padding: 1rem 0;
+  }
+
   .header-content {
     padding: 0 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
   }
 
   .header-right {
-    gap: 1rem;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
 
   .coming-soon-badge {
     font-size: 0.65rem;
-    padding: 0.4rem 1rem;
+    padding: 0.4rem 0.9rem;
+    letter-spacing: 0.1em;
   }
 
   .social-icons {
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .social-icons svg {
@@ -384,35 +402,90 @@
     height: 18px;
   }
 
+  .hero-content {
+    padding: 1.5rem;
+  }
+
   .hero-title {
     letter-spacing: 0.15em;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-tagline {
+    font-size: clamp(1.25rem, 4vw, 2rem);
   }
 
   .work-with-us-section {
-    padding: 5rem 1.5rem;
+    padding: 4rem 1.5rem;
+  }
+
+  .section-title {
+    margin-bottom: 1rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+    padding: 0 0.5rem;
   }
 
   .application-form {
     padding: 2rem 1.5rem;
   }
 
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.875rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .submit-button {
+    padding: 1rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
   .success-message {
-    padding: 3rem 2rem;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .success-message h3 {
+    font-size: 1.75rem;
+  }
+
+  .success-message p {
+    font-size: 1rem;
+  }
+
+  .footer {
+    padding: 2rem 1.5rem;
   }
 
   .footer-content {
     flex-direction: column;
     text-align: center;
+    gap: 1rem;
   }
 
   .footer-links {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
+  .header-content {
+    padding: 0 1rem;
+  }
+
   .logo-text {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
   }
 
   .logo-icon {
@@ -420,21 +493,147 @@
     height: 32px;
   }
 
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+  }
+
+  .coming-soon-badge {
+    font-size: 0.6rem;
+    padding: 0.35rem 0.8rem;
+  }
+
+  .hero-content {
+    padding: 1rem;
+  }
+
+  .hero-title {
+    letter-spacing: 0.1em;
+  }
+
   .hero-tagline {
     letter-spacing: 0.02em;
+    font-size: clamp(1.1rem, 5vw, 1.75rem);
+  }
+
+  .work-with-us-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    margin-bottom: 0.75rem;
   }
 
   .section-subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    line-height: 1.5;
+  }
+
+  .application-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+
+  .form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
   }
 
   .form-group input,
   .form-group select,
   .form-group textarea {
-    padding: 0.875rem 1rem;
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
   }
 
   .submit-button {
-    padding: 1rem 1.5rem;
+    padding: 0.875rem 1.25rem;
+    font-size: 0.9rem;
+  }
+
+  .success-message {
+    padding: 2rem 1rem;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .success-message h3 {
+    font-size: 1.5rem;
+  }
+
+  .success-message p {
+    font-size: 0.95rem;
+  }
+
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .footer-content {
+    gap: 0.75rem;
+  }
+
+  .copyright {
+    font-size: 0.85rem;
+  }
+
+  .footer-links {
+    font-size: 0.85rem;
+    gap: 0.75rem;
   }
 }
+
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem 0;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .coming-soon-badge {
+    font-size: 0.55rem;
+    padding: 0.3rem 0.7rem;
+  }
+
+  .social-icons {
+    gap: 0.5rem;
+  }
+
+  .social-icons svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .hero-title {
+    letter-spacing: 0.08em;
+  }
+
+  .work-with-us-section {
+    padding: 2.5rem 0.75rem;
+  }
+
+  .application-form {
+    padding: 1.25rem 0.75rem;
+  }
+}
+
