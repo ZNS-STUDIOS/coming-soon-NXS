@@ -161,7 +161,7 @@ const WorkWithUsForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
+
     // Create mailto link with pre-filled information
     const subject = encodeURIComponent(`ZNS NEXUS Team Application - ${formData.role}`);
     const body = encodeURIComponent(
@@ -170,15 +170,15 @@ const WorkWithUsForm = () => {
       `Role Interested In: ${formData.role}\n\n` +
       `Message:\n${formData.message}`
     );
-    
-    const mailtoLink = `mailto:ZNS.NXS@proton.me?subject=${subject}&body=${body}`;
-    
+
+    const mailtoLink = `mailto:ZNS.Nexus.main@pm.me?subject=${subject}&body=${body}`;
+
     // Open email client
     window.location.href = mailtoLink;
-    
+
     // Show success message
     setShowSuccess(true);
-    
+
     // Reset form after 3 seconds
     setTimeout(() => {
       setFormData({
