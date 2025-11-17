@@ -190,7 +190,7 @@ const WorkWithUsForm = () => {
         message: ''
       });
       setShowSuccess(false);
-    }, 3000);
+    }, 5000);
   };
 
   return (
@@ -248,8 +248,10 @@ const WorkWithUsForm = () => {
                 data-testid="role-select"
               >
                 <option value="Web Developer">Web Developer</option>
-                <option value="Video Editor">Video Editor</option>
                 <option value="Photographer/Photo Editor">Photographer/Photo Editor</option>
+                <option value="Videographer/Video Editor">Videographer/Video Editor</option>
+                <option value="Social Media Manager">Social Media Manager</option>
+                <option value="Content Strategist">Content Strategist</option>
                 <option value="General/Other Roles">General/Other Roles</option>
               </select>
             </div>
